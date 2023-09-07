@@ -7,12 +7,12 @@ class Counter1{
     public synchronized void increase(){
         count++;
     }
-    public  Object locker=new Object();
+//    public  Object locker=new Object();
     //修饰代码块
     public void increase1(){
-        synchronized (locker){//用Counter内部特有的对象
-            count++;
-        }
+//        synchronized (locker){//用Counter内部特有的对象
+//            count++;
+//        }
         synchronized (this){//用this，谁调用了该方法，谁就是this
             count++;
         }
